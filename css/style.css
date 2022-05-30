@@ -377,6 +377,17 @@ footer ul{
     content: "💌";
     display: block;
 }
+.socils{
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.2;
+}
+.socils::before{
+    content: "🌐";
+    display: block;
+}
 .obrig-container{
     background-color: #0d0e0f;
 }
