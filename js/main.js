@@ -39,10 +39,6 @@ function ready(){
         var button = addCart[i]
         button.addEventListener("click", addCartClicked)
     }
-    var addCart = document.getElementsByClassName("btn-seg")
-    // Buy Button Work
-    document.getElementsByClassName("btn-buy")[0]
-    .addEventListener("click", buyButtonClicked)
 }
 // Buy Button
 function buyButtonClicked(){

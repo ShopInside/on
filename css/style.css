@@ -229,6 +229,18 @@ header{
 .add-cart:hover{
     background: hsl(249, 32%, 17%);
 }
+.add-comp{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+}
+.add-comp:hover{
+    background: hsl(249, 32%, 17%);
+}
 .whatsapp-suporte{
     color: var(--text-color);
     font-size: 30px;
