@@ -58,11 +58,6 @@ header{
     justify-content: space-between;
     padding: 20px 0;
 }
-.logo{
-    font-size: 1.1rem;
-    color: var(--text-color);
-    font-weight: 400;
-}
 #card-icon{
     font-size: 1.8rem;
     cursor: pointer;
@@ -462,6 +457,66 @@ footer ul{
     border-radius: 8px;
     cursor: pointer;
 }
+/* Logo */
+.navcontainer{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.list{
+    font-size: large;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #0d0e0f;
+    text-decoration: none;
+}
+.list:hover{
+    opacity: 0.7;
+}
+.logo{
+    font-size: 24px;
+    color: #0d0e0f;
+    letter-spacing: 4px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #fff;
+    height: 10vh;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.mobile-menu{
+    display: none;
+    margin-left: 60px;
+    font-size: 1.5rem;
+    color: #0d0e0f;
+    cursor: pointer;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #0d0e0f;
+    margin: 8px;
+    transition: 0.3s;
+}
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
 /* Responsividade */
 @media (max-width: 1080px){
     .nav{
@@ -476,6 +531,34 @@ footer ul{
     }
     .shop{
         margin-top: 2rem !important;
+    }
+}
+@media (max-width: 999px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .nav-list.active{
+        transform: translateX(0);
     }
 }
 @media screen and (min-width: 600px) {
@@ -504,9 +587,6 @@ footer ul{
     .nav{
         padding: 11px;
     }
-    .logo{
-        font-size: 1rem;
-    }
     .cart{
         width: 320px;
     }
@@ -520,5 +600,15 @@ footer ul{
     }
     .rodape{
         width: 280px;
+    }
+}
+@keyframes navLinkFade{
+    from{
+    opacity: 0;
+    transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
